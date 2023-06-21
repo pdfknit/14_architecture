@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{page_name}}</title>
+</head>
+<body>
+<ul>
+    <li><a href="/">Главная</a></li>
+    <li><a href="/contacts">Контакты</a></li>
+    <li><a href="">404</a></li>
+</ul>
+
+<h1> {{page_name}} </h1>
+<h3> {{text}} </h3>
+<ul>
+    {%for ability in abilities %}
+    <li>{{ability}}</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
