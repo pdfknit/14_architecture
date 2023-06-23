@@ -1,7 +1,7 @@
 from wsgiref.simple_server import make_server
 
-from app import Application
-from config import DEFAULT_PORT
+from framework.app import Application
+from framework.config import DEFAULT_PORT
 from urls import routes
 
 application = Application(routes, front_controller={})
