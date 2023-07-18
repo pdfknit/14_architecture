@@ -1,0 +1,12 @@
+{% extends 'light/base.html' %}
+{% block content %}
+    <div>
+        <h1>Отель {{room.hotel}}</h1>
+        <h2>Посетители комнаты {{room.name}}:</h2>
+        <p>
+        {% for visitor in room.visitors %}
+            <li><a href="/visitors/?id={{visitor.auto_id}}">{{visitor.name}}</a></li>
+        {% endfor %}
+        </p>
+    </div>
+{% endblock %}

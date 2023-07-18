@@ -1,0 +1,20 @@
+{% extends 'light/base.html' %}
+{% block content %}
+
+<h2>Add visitor to room</h2>
+    <form method="post">
+        <select size="3" name="visitor_auto_id">
+            {% for item in visitors %}
+            <option value="{{item.auto_id}}">{{item.name}}</option>
+            {% endfor %}
+        </select>
+        <select size="3" name="room_auto_id">
+            {% for item in rooms %}
+            <option value="{{item.auto_id}}">{{item.hotel}} - {{item.name}}</option>
+<!--            <option value="test">{{item.name}}</option>-->
+            {% endfor %}
+        </select>
+        <button type="submit">Add</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'light/base.html' %}
+{% block content %}
+    <div>
+        <h1>{{hotel_name}}</h1>
+        {% for room in rooms %}
+            <li><a href="/rooms/?id={{room.auto_id}}">{{room.name}}</a></li>
+        {% endfor %}
+    </div>
+    <h2>Добавить комнату</h2>
+    <form action="#" method="post">
+    <div class="form_settings">
+        <p><span>Название комнаты</span><input class="contact" type="text" name="name" value=""/></p>
+<!--        <p><span>Тип отеля</span><input class="contact" type="text" name="hotel_type" value=""/></p>-->
+        <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted"
+                                                               value="Add new room"/></p>
+    </div>
+</form>
+{% endblock %}
