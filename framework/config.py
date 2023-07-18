@@ -1,1 +1,3 @@
 DEFAULT_PORT = 8001
+DEFAULT_TEMPLATES_FOLDER = 'templates'
+DATABASE_NAME = 'hotelsgroup.sqlite'

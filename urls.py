@@ -1,9 +1,10 @@
 from framework.app import PageNotFound404
-from views import index_view, contact_view
+from views import class_routers, IndexView
 
 routes = {
-    '/': index_view,
-    '/contacts': contact_view,
     '/404': PageNotFound404(),
-    '/index': index_view,
+    # '/index2': IndexView()
 }
+# print('class_routers', class_routers)
+routes.update(class_routers)
+# print('routes', routes)

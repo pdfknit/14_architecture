@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>simple_light</title>
+    <meta name="description" content="website description"/>
+    <meta name="keywords" content="website keywords, website keywords"/>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+    <link rel="stylesheet" type="text/css" href="style/style.css"/>
+    {% include 'light/inc-style.html' %}
+
+</head>
+
+<body>
+<div id="main">
+    {% include 'light/inc-header.html' %}
+    <div id="site_content">
+        {% include 'light/inc-sidebar.html' %}
+
+        <div id="content">
+            {% block content %}
+            <h1>??????? ??????</h1>
+            {% endblock %}
+        </div>
+    </div>
+    {% include 'light/inc-footer.html' %}
+</div>
+</body>
+</html>

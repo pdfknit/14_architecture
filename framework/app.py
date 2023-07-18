@@ -25,13 +25,17 @@ class Application:
 
         if request['request_method'] == 'GET':
             query_dict = parse_input_data(environ['QUERY_STRING'])
-            print('GET запрос с параметрами:', query_dict)
+            # print('GET запрос с параметрами:', query_dict)
+            request['query_parameters'] = query_dict
 
         if request['request_method'] == 'POST':
             post_data = get_post_data(environ)
-            query_dict = decode_value(bytes_to_dict(post_data))
+            post_dict = decode_value(bytes_to_dict(post_data))
+            query_dict = parse_input_data(environ['QUERY_STRING'])
             # query_dict = bytes_to_dict(post_data)
-            print('POST запрос с параметрами:', query_dict)
+            print('POST запрос с параметрами:', post_dict)
+            request['post_parameters'] = post_dict
+            request['query_parameters'] = query_dict
 
         for front_controller in self.front_controller:
             front_controller(request)

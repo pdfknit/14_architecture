@@ -1,0 +1,18 @@
+{% extends 'light/base.html' %}
+{% block content %}
+
+<h1>Visitor's list</h1>
+<ul>
+    {% for visitor in visitors %}
+    <li><a href="/visitors/?id={{visitor.auto_id}}">{{visitor.name}} </a></li>
+    {% endfor %}
+</ul>
+<h2>Add new visitor</h2>
+<form action="#" method="post">
+    <div class="form_settings">
+        <p><span>Visitor's name</span><input class="contact" type="text" name="name" value=""/></p>
+        <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted"
+                                                               value="Add visitors"/></p>
+    </div>
+</form>
+{% endblock %}
